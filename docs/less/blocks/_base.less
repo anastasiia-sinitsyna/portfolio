@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'M PLUS 1p', sans-serif;
+    margin: 0;
+}
+
+.none{
+    display: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+button, input, textarea{
+    outline: none;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    
+    @media (min-width: 768px){
+        width: 768px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media (min-width: 1200px){
+        width: 1140px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-title{
+    color: #000000;
+    font-size: 42px;
+    font-weight: 800;
+
+    @media (min-width: 768px){
+        font-size: 52px;
+    }
+    
+    @media (min-width: 1200px){
+        font-size: 64px;
+    }
+
+    & span{
+        position: relative;
+        z-index: 1;
+
+        &::after{
+            content: "";
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 102%;
+            transform: translate(-1%, -60%);
+            height: 12px;
+            background-color: #fbdc4d;
+
+            @media (min-width: 768px){
+                transform: translate(-1%, -100%);
+            }
+            
+            @media (min-width: 1200px){
+                transform: translate(-1%, -125%);
+            }
+            
+        }
+    }
+}
+
+.primary-link {
+    margin-right: 20px;
+    display: inline-block;
+    padding: 16px 75px;
+    border-radius: 31px;
+    background-color: #fbdc4d;
+    transition: all 0.3s ease 0s;
+
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+
+    &:hover{
+        background-color: #000000;
+        color: #fbdc4d;
+    }
+
+    @media (min-width: 768px){
+        padding: 16px 90px;
+    }
+    
+    @media (min-width: 1200px){
+        font-size: 22px;
+        padding: 20px 40px;
+    }
+}
+
+.social-icons{
+    a{
+        display: inline-block;
+        margin-right: 25px;
+
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+
+    svg{
+        width: 50px;
+        height: 50px;
+    }
+}
