@@ -361,6 +361,7 @@ ul {
 }
 .about-me__img-wrapper {
   position: relative;
+  flex-direction: row-reverse;
   margin-bottom: 48px;
 }
 .about-me__img-wrapper::after {
